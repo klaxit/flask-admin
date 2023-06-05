@@ -125,7 +125,9 @@
           maxBounds: maxBounds
         }
 
-        if (!editable) {
+        // Still want to navigate on map without edition on details page
+        // Note that this break the list view for geom, which we dont use.
+        /*if (!editable) {
           mapOptions.dragging = false;
           mapOptions.touchzoom = false;
           mapOptions.scrollWheelZoom = false;
@@ -134,7 +136,7 @@
           mapOptions.tap = false;
           mapOptions.keyboard = false;
           mapOptions.zoomControl = false;
-        }
+        }*/
 
         // only show attributions if the map is big enough
         // (otherwise, it gets in the way)
